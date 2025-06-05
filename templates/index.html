@@ -3,9 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Python Miniproject</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('../image/Screenshot (24).png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        nav {
+            background: linear-gradient(90deg, #333 60%, #4e54c8 100%);
+            color: #fff;
+            padding: 1.2em 0;
+            width: 100vw;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2em;
+        }
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        .hero {
+            background: linear-gradient(120deg, rgba(78,84,200,0.9) 0%, rgba(143,148,251,0.9) 100%);
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+            margin-top: 90px;
+        }
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 0.3em;
+        }
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 0.5em;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #000;
+            max-width: 500px;
+            width: 100%;
+            padding: 2em;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.1);
+        }
+        .container h2 {
+            margin-top: 0;
+            color: #4e54c8;
+        }
+        .projects {
+            margin: 40px auto;
+            max-width: 1200px;
+        }
+        .projects h2 {
+            color: #4e54c8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            padding: 1.5em;
+            flex: 1 1 250px;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .project-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.2em 0;
+            margin-top: 40px;
+            font-size: 1em;
+        }
+        @media (max-width: 900px) {
+            .flex-container, .project-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hero {
+                margin-top: 120px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h>hi i am jasjeet</h>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Jasjeet</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="http://localhost:8501" target="_blank">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <h1>Hi, I am Jasjeet</h1>
+        <p>BCA Student in SICSR</p>
+        <p>This is my miniproject about spotify dashboard</p>
+    </section>
+    <div class="flex-container">
+        <div class="container" id="about">
+            <h2>About My Miniproject</h2>
+            <p>This project is built using Python and Streamlit to analyze Spotify song data.</p>
+            <ul>
+                <li>Visualizes most streamed songs</li>
+                <li>Uses Pandas and Matplotlib</li>
+                <li>Interactive filters and graphs</li>
+            </ul>
+        </div>
+        <div class="container" id="contact">
+            <h2>About Spotify</h2>
+            <p>Spotify is a music streaming platform that provides access to millions of songs and podcasts.</p>
+            <p>It’s known for its user-friendly interface and music personalization features.</p>
+        </div>
+    </div>
+    <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project-card">
+                <h3>Stream Analysis</h3>
+                <p>Shows top streamed songs with graphs based on user interactions.</p>
+            </div>
+            <div class="project-card">
+                <h3>Genre Insights</h3>
+                <p>Provides insights into popular genres and artist trends over time.</p>
+            </div>
+            <div class="project-card">
+                <h3>Custom Dashboard</h3>
+                <p>Dashboard built in Streamlit for interactive data exploration.</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        &copy; 2025 Jasjeet. All rights reserved.
+    </footer>
 </body>
 </html>

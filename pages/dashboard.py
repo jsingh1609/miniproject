@@ -4,7 +4,7 @@ import plotly.express as px
 
 st.title("Spotify Dashboard")
 
-st.image("image/AppleCompetition-FTRHeader_V2-1440x733.png", caption="", use_column_width=True)
+st.image("image/AppleCompetition-FTRHeader_V2-1440x733.png", caption="", use_container_width=True)
 
 df = pd.read_csv('spotify-2023.csv', encoding='ISO-8859-1')
 

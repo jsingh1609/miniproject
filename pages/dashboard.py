@@ -6,17 +6,12 @@ st.title("Spotify Dashboard")
 
 st.image("image/AppleCompetition-FTRHeader_V2-1440x733.png", caption="", use_column_width=True)
 
-@st.cache_data
-def load_data():
-    # Load the dataset
-    df = pd.read_csv("spotify-2023.csv", encoding='latin1')
-    return df
+df = pd.read_csv('spotify-2023.csv', encoding='ISO-8859-1')
 
-df = load_data()
 
 st.dataframe(df)
 
-df['track_name'] = df['track_name'].str.encode('latin1').str.decode('utf-8', errors='ignore')
+
 
 df['streams'] = pd.to_numeric(df['streams'].astype(str).str.replace(',', ''), errors='coerce')
 
@@ -282,4 +277,4 @@ st.plotly_chart(fig)
 #     points='all'
 # )
 
-# fig
+# streamlit run app.py

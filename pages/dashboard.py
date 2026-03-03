@@ -103,7 +103,7 @@ fig = px.scatter(
     y='danceability_%',
     size='streams',
     color='artist(s)_name',
-    title='Energy vs Danceability (Bubble Size = Streams)',
+    title='Energy vs Danceability (Bubble Size = Streams) please click on fullscreen button to see the details',
     labels={'energy_%': 'Energy', 'danceability_%': 'Danceability'}
 )
 st.plotly_chart(fig)
